@@ -161,19 +161,3 @@ a{
 .icon {
   margin-right: 8px;
 }
-
-/* 響應式 */
-@media (max-width: 900px) {
-  .footer-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 28px;
-  }
-  .footer-info-right {
-    align-items: flex-start;
-  }
-  .footer-main {
-    padding: 40px 0 20px 0;
-  }
-}

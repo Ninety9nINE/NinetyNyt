@@ -153,16 +153,6 @@ max-width: 620px;      /* 或 max-width: 420px; 視需求調整 */
   margin-right: 8px;
 }
 
-@media (max-width: 900px) {
-  .contact-info-map {
-    flex-direction: column;
-    gap: 22px;
-  }
-  .contact-map iframe {
-    height: 180px;
-  }
-}
-
 
 /* Footer */
 .site-footer {

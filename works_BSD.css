@@ -127,13 +127,6 @@ a{
   
 }
 
-@media (max-width: 900px) {
-  .project-top { flex-direction: column; gap: 16px; }
-  .main-img { width: 100%; }
-  .project-section.row { flex-direction: column; gap: 10px; }
-  .project-gallery img { height: 54px; }
-}
-
 /* Footer */
 .site-footer {
   color: #ded1ac;
@@ -209,20 +202,4 @@ a{
 }
 .icon {
   margin-right: 8px;
-}
-
-/* 響應式 */
-@media (max-width: 900px) {
-  .footer-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 28px;
-  }
-  .footer-info-right {
-    align-items: flex-start;
-  }
-  .footer-main {
-    padding: 40px 0 20px 0;
-  }
 }

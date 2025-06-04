@@ -246,49 +246,6 @@ z-index: 2;
   letter-spacing: 3px;
 }
 
-/* 4. RWD：當螢幕寬度過窄（約小於 900px）時，改為直式疊放 */
-@media (max-width: 900px) {
-  .service-contact-container {
-    flex-direction: column;
-    min-height: auto;
-    padding: 60px 0;
-  }
-  .service-box,
-  .contact-box {
-    flex: 0 0 auto;
-    width: 90%;
-    max-width: none;
-    min-width: auto;
-    margin: 0 auto  -50px auto; /* 讓箭頭上下對齊 */
-    clip-path: polygon(
-      20px 0,
-      100% 0,
-      100% 100%,
-      20px 100%,
-      0 50%
-    ); /* 手機版改成左側小箭頭向右 */
-  }
-  .service-box {
-    margin-bottom: -50px; /* 第一格下方負邊距 */
-    clip-path: polygon(
-      0 0,
-      calc(100% - 20px) 0,
-      100% 50%,
-      calc(100% - 20px) 100%,
-      0 100%
-    );
-  }
-  .contact-box {
-    margin-bottom: 0;    /* 第二格保留負邊距即可覆蓋 */
-    clip-path: polygon(
-      20px 0,
-      100% 0,
-      100% 100%,
-      20px 100%,
-      0 50%
-    );
-  }
-}
 /*  */
 .service-box,
 .contact-box {
