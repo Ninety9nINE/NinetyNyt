@@ -15,7 +15,7 @@ html, body {
     padding-bottom: 10px;
 }
 .header-hero {
-    background-image: url(pics/topBG.jpg);
+    background-image: url(./pics/topBG.jpg);
     min-width: 1500px;
     height: 960px;
     object-fit: contain;
@@ -201,14 +201,14 @@ a{
 }
 .uiux {
   grid-column: 1 / span 2;
-  background-image: url(/pics/uiux_point.jpg);
+  background-image: url(./pics/uiux_point.jpg);
   background-position: 88% 70%;
 }
 .video {
-  background-image: url(/pics/video_edit.jpg);
+  background-image: url(./pics/video_edit.jpg);
 }
 .modeling {
-  background-image: url(/pics/3D_modeling.jpg);
+  background-image: url(./pics/3D_modeling.jpg);
   background-position: 25% 15%;
 }
 
@@ -225,7 +225,7 @@ a{
   position: relative;
   background-position: bottom;
   background-size: cover;
-  background-image: url(/pics/award3.jpg);
+  background-image: url(./pics/award3.jpg);
   margin: 40px auto;
   max-width: 100%;
   height: 840px;
@@ -354,7 +354,7 @@ a{
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('/pics/circle_BG.svg');
+  background-image: url('./pics/circle_BG.svg');
   z-index: 1;
   pointer-events: none;
 }
@@ -369,7 +369,7 @@ a{
   background-repeat: no-repeat;
   background-size: 600px 100%;
   background-position: left center;
-  background-image: url('/pics/circle_BG.svg');
+  background-image: url('./pics/circle_BG.svg');
   z-index: 1;
   pointer-events: none;
 }
