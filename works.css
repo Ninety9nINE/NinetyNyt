@@ -8,58 +8,7 @@ html, body {
     padding: 0;
     background-color: #222C31;
 }
-/* Sidebar Logo & Float List */
-.sidebar-divilogo {
-    width: 160px;
-    position: fixed;
-    top: 60px;
-    left: 106px;
-    z-index: 2;
-    cursor: default;
-}
-.sidebar-divilogo.active {
-    cursor: pointer;
-}
-.sidebar-divilogo img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-}
-.sidebar-float-list {
-    width: 200px;
-    position: absolute;
-    top: 140px;
-    left: -45px;
-    color: #ded1ac;
-    border-radius: 5px;
-    box-shadow: 0 4px 24px #0008;
-    z-index: 999;
-    padding: 24px;
-    visibility: hidden;
-    pointer-events: none;
-    list-style-type: none;
-    transform: translateY(-30px);
-    opacity: 0;
-    transition: transform 0.35s cubic-bezier(.4,1.7,.7,1), opacity 0.35s;
-    background-color: #232b2e;
-}
-.sidebar-float-list.show {
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-  opacity: 1;
-}
-.sidebar-float-list ul {
-  padding-left: 0;
-}
-.sidebar-float-list li {
-    margin: 60px 0;
-    font-family: 'Space Mono', monospace;
-    list-style: none;
-    text-align: center;
-    font-weight: bold;
-}
+
 a{
     color: inherit;
     text-decoration: none;
