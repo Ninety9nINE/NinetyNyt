@@ -1,0 +1,52 @@
+.sidebar-float-list {
+  width: 200px;
+  position: absolute;
+  top: 140px;
+  left: -45px;
+  background: #232b2e;
+  color: #ded1ac;
+  border-radius: 5px;
+  box-shadow: 0 4px 24px #0008;
+  z-index: 999;
+  padding: 24px;
+  visibility: hidden;
+  pointer-events: none;
+  list-style-type: none;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(.4,1.7,.7,1), opacity 0.35s;
+}
+.sidebar-float-list.show {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  opacity: 1;
+}
+.sidebar-float-list ul {
+  padding-left: 0;
+}
+.sidebar-float-list li {
+  margin: 60px 0;
+  font-family: 'Space Mono', monospace;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 0;
+}
+.sidebar-float-list li::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #DED1AC;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+.sidebar-float-list li:hover::after{
+    width: 100%;
+}
+.sidebar-float-list li a{
+  padding: 20px 0;
+}

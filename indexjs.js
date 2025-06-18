@@ -12,10 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sidebarRect.bottom >= headerRect.bottom) {
       sidebar.classList.add('hide');
       sidebarLogo.classList.add('active');
+             // LOGO 縮小
+    sidebarLogo.classList.add('small');
     } else {
       sidebar.classList.remove('hide');
       sidebarLogo.classList.remove('active');
       sidebarFloatList.classList.remove('show');
+             // LOGO 回ㄈ 副
+    sidebarLogo.classList.remove('small');
     }
   }
 
