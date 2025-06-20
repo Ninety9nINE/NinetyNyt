@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninetynight</title>
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="indexstyle.css">
-    <script src="./indexjs.js"></script>
+    <link rel="stylesheet" href="./indexstyle.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./indexjs.js" defer></script>
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -57,7 +60,9 @@
         <div class="topview">
             <div class="header-hero"></div>
             <section class="header-title">
-                <span class="whatwedo">WHAT WE DO</span>
+                <div class="line-bg"></div>
+                <div class="whatwedo">WHAT WE DO</div>
+                <div class="line-bg"></div>
             </section>
             <div class="work-selection">
                 <a href="./works.html" class="work-item uiux">
@@ -78,7 +83,9 @@
     <main>
         <!-- NEWS SECTION -->
         <section class="news-section">
+            <div class="line-bg"></div>
             <span>NEWS</span>
+            <div class="line-bg"></div>
         </section>
         <div class="news-area">
             <div class="overlay2"></div>
@@ -132,10 +139,23 @@
                         每晚聚焦單一任務，分為創意發想（Ideation）...
                     </div>
                 </div>
+                <div class="news-item">
+                    <div class="news-title">
+                        <span class="arrow">&gt;</span>
+                        <span class="text">九夜計畫 正式啟動</span>
+                        <span class="date">2025.05.12</span>
+                    </div>
+                    <div class="news-content">
+                        「九夜計畫」系列，每晚聚焦單一任務，分為創意發想（Ideation）<br>
+                        或UI制作（UI Production）兩種模式，以下是依照「一次針對一種主題，<br>
+                        且只有UI制作或創意發想」規劃的...
+                    </div>
+                </div>
             </div>
+            
             <div class="news-pagination">
-                <button class="news-prev" aria-label="上一頁"><span>&lt;</span></button>
-                <button class="news-next" aria-label="下一頁"><span>&gt;</span></button>
+                <button class="news-prev" aria-label="上一頁"><span><img src="./pics/svg/chevron-right.svg" alt=""></span></button>
+                <button class="news-next" aria-label="下一頁"><span><img src="./pics/svg/chevron-right.svg" alt=""></span></button>
             </div>
         </div>
         <!-- WHO WE ARE -->
@@ -160,7 +180,7 @@
             </div>
         </div>
         <!-- WORKS -->
-        <div class="horizontal-scroll-wrapper" style="position: relative;">
+        <div class="horizontal-scroll-wrapper" >
             <section class="works-title">
                 <span class="works-title">WORKS</span>
                 <div class="works-title2">FEATURED PROJECTS</div>
@@ -172,10 +192,10 @@
                 <div class="work-card"><a href="./work_BSD.html"><img src="./pics/BSD.jpg" alt=""></a></div>
                 <div class="work-card"><a href="./work_BSD.html"><img src="./pics/BSD.jpg" alt=""></a></div>
             </div>
-            <button class="scroll-more-btn"><a href="./works.html">MORE</a></button>
+            <a href="./works.html" class="scroll-more-btn">MORE</a>
         </div>
         <!-- CO-BRANDS -->
-        <div class="horizontal-scroll-wrapper" style="position: relative;">
+        <div class="horizontal-scroll-wrapper" >
             <section class="works-title">
                 <span class="works-title">Co-BRANDS</span>
                 <div class="works-title2">BRAND COLLABS</div>
@@ -186,7 +206,7 @@
                 <div class="brand-card"><img src="./pics/br03.jpg" alt=""></div>
                 <div class="brand-card"><img src="./pics/br04.jpg" alt=""></div>
             </div>
-            <button class="scroll-more-btn"><a href="./works.html">MORE</a></button>
+            
         </div>
     </main>
     <footer class="site-footer">
