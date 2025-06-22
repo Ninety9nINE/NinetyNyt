@@ -7,12 +7,32 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="./works.css">
-    
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="./siderbar_float.css">
     <title>Works</title>
     <script src="works.js"></script>
 </head>
 <body>
+  <!--  Mobile / Tablet Header -->
+<div class="mobile-header-bar">
+  <img src="./pics/LOGO_mixed_dark.svg" alt="Ninetynight Logo">
+  <button id="menuBtn" class="mobile-menu-btn">MENU</button>
+</div>
+
+<!--  Slide-out Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="./index.html">首頁</a></li>
+    <li><a href="./about.html">關於</a></li>
+    <li><a href="./works.html">作品集</a></li>
+    <li><a href="./services.html">服務</a></li>
+    <li><a href="./contact.html">聯絡我們</a></li>
+  </ul>
+</nav>
+
+<!--  遮罩 -->
+<div class="mobile-menu-overlay"></div>
+
     <aside class="sidebar-divilogo" id="sidebarLogo">
         <div class="sidebar-logo" id="logoBtn">
         <img src="./pics/LOGO_mixed.svg" alt="mainlogo">
@@ -46,7 +66,9 @@
     <button class="filter-btn" data-filter="3d">3D</button>
     <button class="filter-btn" data-filter="video">VIDEO</button>
   </div>
+  
 <hr class="divider">
+ <div class="works-select">
   <!-- 作品集格子 -->
   <div class="gallery">
   <div class="gallery-item" data-category="3d">
@@ -70,26 +92,36 @@
     </a>
     <a class="item-tag" href="">VIDEO</a>
   </div>
-    <div class="gallery-item" data-category="video">
-    <a href="./work_goodbye.html">
-      <img src="pics/goodbye.jpg" alt="">
-      <div class="item-title">下輩子再見</div>
-    </a>
-    <a class="item-tag" href="">VIDEO</a>
-  </div>
+
 
   <!-- 新增卡 -->
+</div>
 </div>
 <hr class="divider">
   <!-- 分頁圓點 -->
   <div class="gallery-pagination">
-    <button class="page-btn prev" aria-label="上一頁"><</button>
+  <button class="page-btn prev" aria-label="上一頁">
+    <span>
+      <svg width="22" height="24" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.5789 11.0527H4.21051L11.0526 17.8948L9.66314 19.4737L0.189453 10.0001L9.66314 0.526367L11.0526 2.10532L4.21051 8.94742H21.5789V11.0527Z" fill="currentColor"/>
+                </svg>
+    </span>
+  </button>
+  <div class="dots">
     <span class="dot active"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <button class="page-btn next" aria-label="下一頁">></button>
+    <!-- 你可以動態產生更多dot -->
   </div>
+  <button class="page-btn next" aria-label="下一頁">
+    <span>
+      <svg width="22" height="24" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.420898 8.94742H17.7893L10.9472 2.10532L12.3577 0.526367L21.8314 10.0001L12.3577 19.4737L10.9472 17.8948L17.7893 11.0527H0.420898V8.94742Z" fill="currentColor"/>
+                </svg>
+    </span>
+  </button>
 </div>
+
 
 <!-- 服聯區 -->
 <div class="service-contact-container">
@@ -114,63 +146,87 @@
 </div>
 
     </main>
-        <footer class="site-footer">
-    <div class="footer-main">
-        <ul class="footer-menu">
-        <li>
-            <a href="index.html">
-            <span class="menu-zh">• 首頁</span>
-            </a>
-            <span class="menu-en">HOME</span>
-            
-        </li>
-        <li>
-            <a href="about.html">
-            <span class="menu-zh">• 關於我們</span>
-            </a>
-            <span class="menu-en">ABOUT</span>
-            
-        </li>
-        <li>
-            <a href="works.html">
-            <span class="menu-zh">• 作品集</span>
-            </a>
-            <span class="menu-en">WORKS</span>
-        </li>
-        <li>
-            <a href="services.html">
-            <span class="menu-zh">• 服務</span>
-            </a>
-            <span class="menu-en">SERVICES</span>
-        </li>
-        <li>
-            <a href="contact.html">
-            <span class="menu-zh">• 聯絡我們</span>
-            </a>
-            <span class="menu-en">CONTACT</span>
-        </li>
-        </ul>
-    </div>
-    <div class="footer-info">
-        <div class="footer-info-left">
-        <div>32041 桃園市中壢區石頭里中和路139號</div>
-        <div>
-            <span class="icon">&#9993;</span> ninetynight@workshop.com
+    <footer class="site-footer">
+        <div class="footer-main">
+            <ul class="footer-menu">
+  <li>
+    <a href="./index.html">
+      <span class="menu-zh">• 首頁</span>
+      <span class="menu-en">HOME</span>
+    </a>
+  </li>
+  <li>
+    <a href="./about.html">
+      <span class="menu-zh">• 關於我們</span>
+      <span class="menu-en">ABOUT</span>
+    </a>
+  </li>
+  <li>
+    <a href="./works.html">
+      <span class="menu-zh">• 作品集</span>
+      <span class="menu-en">WORKS</span>
+    </a>
+  </li>
+  <li>
+    <a href="./services.html">
+      <span class="menu-zh">• 服務</span>
+      <span class="menu-en">SERVICES</span>
+    </a>
+  </li>
+  <li>
+    <a href="./contact.html">
+      <span class="menu-zh">• 聯絡我們</span>
+      <span class="menu-en">CONTACT</span>
+    </a>
+  </li>
+</ul>
         </div>
-        <div>
-            <span class="icon">&#9742;</span> 03-456-789
+        <div class="footer-info">
+            <div class="footer-info-left">
+                <div>32041 桃園市中壢區石頭里中和路139號</div>
+                <div><span class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.4345 4.06494H4.56445C3.90141 4.06494 3.26553 4.32833 2.79669 4.79717C2.32785 5.26602 2.06445 5.9019 2.06445 6.56494V17.4349C2.06445 18.098 2.32785 18.7339 2.79669 19.2027C3.26553 19.6715 3.90141 19.9349 4.56445 19.9349H19.4345C20.0975 19.9349 20.7334 19.6715 21.2022 19.2027C21.6711 18.7339 21.9345 18.098 21.9345 17.4349V6.56494C21.9345 5.9019 21.6711 5.26602 21.2022 4.79717C20.7334 4.32833 20.0975 4.06494 19.4345 4.06494ZM4.56445 5.06494H19.4345C19.8129 5.06409 20.1775 5.20727 20.4542 5.46542C20.7309 5.72357 20.8991 6.07735 20.9245 6.45494C18.4545 7.77494 15.9745 9.08494 13.4945 10.4049C13.1595 10.6162 12.8044 10.7937 12.4345 10.9349C12.1444 10.9924 11.8454 10.9873 11.5574 10.9201C11.2694 10.8528 10.9991 10.7249 10.7645 10.5449C9.34445 9.79494 7.92445 9.03494 6.51445 8.28494C5.37445 7.68494 4.21445 7.07494 3.07445 6.46494C3.09741 6.08557 3.26447 5.72932 3.54145 5.46907C3.81843 5.20882 4.18439 5.06425 4.56445 5.06494ZM20.9345 17.4349C20.9345 17.8328 20.7764 18.2143 20.4951 18.4956C20.2138 18.7769 19.8323 18.9349 19.4345 18.9349H4.56445C4.16663 18.9349 3.7851 18.7769 3.50379 18.4956C3.22249 18.2143 3.06445 17.8328 3.06445 17.4349V7.59994C5.42445 8.83994 7.77445 10.0999 10.1345 11.3499C10.556 11.6087 11.0099 11.8104 11.4845 11.9499C12.1788 12.063 12.8906 11.9171 13.4845 11.5399C14.9345 10.7799 16.3745 10.0099 17.8245 9.24994C18.8645 8.68994 19.8945 8.14994 20.9345 7.59994V17.4349Z" fill="#DED1AC"/>
+</svg>
+
+                </span> ninetynight@workshop.com</div>
+                <div><span class="icon">
+                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.7065 13.707L20.3545 16.355C20.4395 16.4396 20.5069 16.5401 20.5529 16.6508C20.5989 16.7615 20.6226 16.8802 20.6226 17C20.6226 17.1199 20.5989 17.2386 20.5529 17.3493C20.5069 17.46 20.4395 17.5605 20.3545 17.645C19.4234 18.5764 18.1875 19.1405 16.8738 19.2338C15.5602 19.3271 14.2569 18.9434 13.2035 18.153L11.6285 16.971C9.88497 15.6634 8.33614 14.1146 7.0285 12.371L5.8465 10.796C5.05615 9.74258 4.67239 8.43936 4.76571 7.1257C4.85903 5.81205 5.42316 4.57616 6.3545 3.64502C6.43905 3.56006 6.53956 3.49264 6.65025 3.44664C6.76094 3.40064 6.87963 3.37695 6.9995 3.37695C7.11936 3.37695 7.23805 3.40064 7.34874 3.44664C7.45943 3.49264 7.55994 3.56006 7.6445 3.64502L10.2925 6.29302C10.48 6.48055 10.5853 6.73486 10.5853 7.00002C10.5853 7.26519 10.48 7.51949 10.2925 7.70702L9.2715 8.72802C9.1918 8.80692 9.13919 8.90905 9.12122 9.01974C9.10325 9.13043 9.12085 9.24397 9.1715 9.34402C10.3579 11.7173 12.2822 13.6416 14.6555 14.828C14.7555 14.8787 14.8691 14.8963 14.9798 14.8783C15.0905 14.8603 15.1926 14.8077 15.2715 14.728L16.2915 13.708C16.3844 13.615 16.4947 13.5413 16.6161 13.491C16.7375 13.4406 16.8676 13.4147 16.999 13.4147C17.1304 13.4147 17.2605 13.4406 17.3819 13.491C17.5033 13.5413 17.6136 13.615 17.7065 13.708V13.707Z" stroke="#DED1AC"/>
+</svg>
+
+                </span> 03-456-789</div>
+            </div>
+            <div class="footer-info-right">
+                <div>週一~週五 / 9:00-18:00</div>
+                <div class="footer-socials">
+                    
+                    <a href="./#">
+                    <picture>
+                    <source media="(max-width: 767px)" srcset="./pics/ins-line_dark.svg">
+                    <img src="./pics/ins-line.svg" alt="Instagram">
+                    </picture>
+                    </a>
+
+                    
+                    <a href="./#">
+                    <picture>
+                    <source media="(max-width: 767px)" srcset="./pics/x-line_dark.svg">
+                    <img src="./pics/x-line.svg" alt="X">
+                    </picture>
+                    </a>
+
+                    <a href="./#">
+                    <picture>
+                    
+                    <source media="(max-width: 767px)" srcset="./pics/facebook-1_dark.svg">
+                    <img src="./pics/facebook-1.svg" alt="X">
+                    </picture>
+                    </a>
+                </div>
+                <div class="copyright">© 2025 NinetyNIGHT STUDIO</div>
+            </div>
         </div>
-        </div>
-        <div class="footer-info-right">
-        <div>週一~週五 / 9:00-18:00</div>
-        <div class="footer-socials">
-            <a href="#"><img src="./pics/ins-line.svg" alt="Instagram"></a>
-            <a href="#"><img src="./pics/ri_twitter-x-line.svg" alt="X"></a>
-            <a href="#"><img src="./pics/facebook-1.svg" alt="Facebook"></a>
-        </div>
-        <div class="copyright">© 2025 NinetyNIGHT STUDIO</div>
-        </div>
-    </div>
     </footer>
 </body>
 </html>

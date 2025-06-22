@@ -15,28 +15,32 @@
   gap: 60px;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
-.footer-menu li {
+
+.footer-menu li a {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 4px;
+  align-items: start;
+  text-decoration: none;
+  gap: 8px;
 }
-.menu-zh {
+
+.footer-menu li a span {
   writing-mode: vertical-rl;
-  display: block;
-  margin: 0 2px 0 0;
+  text-align: center;
+}
+
+.footer-menu .menu-zh {
   font-size: 20px;
   font-weight: bold;
-  color: #ded1ac;
-  letter-spacing: 10%;
+  color: #DED1AC;
+  margin-bottom: 4px;
 }
-.menu-en {
-  writing-mode: vertical-rl;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #ded1ac99;
-  margin: 0;
+
+.footer-menu .menu-en {
+  font-size: 14px;
+  color: #DED1AC99;
 }
 .footer-info {
   display: flex;
@@ -48,7 +52,11 @@
 .footer-info-left {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 18px;
+}
+
+.icon svg {
+  vertical-align: bottom;
 }
 .footer-info-right {
   display: flex;
@@ -58,8 +66,8 @@
 }
 .footer-socials {
   display: flex;
-  gap: 24px;
-  margin: 8px 0;
+  gap: 12px;
+  margin: 4px 0;
 }
 .footer-socials img {
   width: 36px;
@@ -69,8 +77,223 @@
 .copyright {
   font-size: 16px;
   color: #ded1ac99;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 .icon {
   margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  
+  .footer-main {
+  padding: 0 20px;              /* 減少原本 200px 的內距，避免超出螢幕 */
+  max-width: 100%;              /* 限制最大寬度不能超出螢幕 */
+  box-sizing: border-box;       /* 讓 padding 包含在 width 內 */
+  overflow-x: hidden;           /* 防止內容水平溢出 */
+  margin: 0 auto;
+}
+  .site-footer {
+    background-color: #ded1ac;
+    color: #232b2e;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+.footer-menu {
+  width: 100%;                  /* 撐滿容器寬度 */
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.footer-menu li {
+  display: flex;                        /* 使用 flex 排列 zh 和 en 文字 */
+  justify-content: space-between;      /* zh 左邊、en 右邊 */
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;        /* 加底線作為分隔 */
+}
+  .footer-main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+  }
+
+.footer-menu a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;                             /* zh 和 en 之間的間距 */
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  color: #222;
+}
+
+.footer-menu .menu-zh,
+.footer-menu .menu-en {
+  writing-mode: initial;
+  font-size: 16px;
+  color: #232b2e;
+  display: block;
+  white-space: nowrap;
+}
+
+  .footer-menu .menu-en {
+    color: #444;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    background: #ded1ac;
+    color: #222;
+    padding: 20px;
+    gap: 16px;
+  }
+  .footer-info svg path {
+    fill: #232b2e; /* 手機版的深色， */
+    stroke: #232b2e; 
+  }
+  .footer-info-left,
+  .footer-info-right {
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-socials img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(1);
+  }
+
+  .copyright {
+    font-size: 14px;
+    color: #222;
+  }
+}
+/* 平板：768px ~ 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer-main {
+    padding: 0 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .site-footer {
+    background-color: #ded1ac;
+    color: #232b2e;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-menu {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-menu a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    color: #222;
+  }
+
+  .footer-menu .menu-zh,
+  .footer-menu .menu-en {
+    writing-mode: initial;
+    font-size: 16px;
+    color: #232b2e;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .footer-menu .menu-en {
+    color: #444;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    background: #ded1ac;
+    color: #222;
+    padding: 20px;
+    gap: 16px;
+  }
+  .footer-info-left,
+  .footer-info-right {
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-socials img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(1);
+  }
+
+  .copyright {
+    font-size: 14px;
+    color: #222;
+  }
+}
+.footer-info svg path {
+    fill: #232b2e; /* 手機版的深色， */
+    stroke: #232b2e; /* 若你也有使用 stroke */
+  }
+
+/* 桌機：1200px 以上 */
+@media (min-width: 1200px) {
+  .site-footer{
+    padding: 0;
+  }
+  .footer-menu {
+    flex-direction: row;
+    gap: 60px;
+  }
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 60px;
+  }
+  .footer-info-right {
+    align-items: flex-end;
+  }
 }

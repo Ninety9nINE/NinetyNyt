@@ -1,21 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const logoBtn = document.getElementById('logoBtn');
-  const sidebarFloatList = document.getElementById('sidebarFloatList');
-  if (logoBtn && sidebarFloatList) {
-    logoBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      sidebarFloatList.classList.toggle('show');
-    });
-    document.addEventListener('click', function(e) {
-      if (!sidebarFloatList.contains(e.target) && e.target !== logoBtn) {
-        sidebarFloatList.classList.remove('show');
-      }
-    });
-  }
-});
 
-//
-// menu
 document.addEventListener('DOMContentLoaded', function () {
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -56,3 +39,4 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleMenu(false);
   });
 });
+

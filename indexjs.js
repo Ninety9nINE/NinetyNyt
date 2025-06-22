@@ -66,9 +66,84 @@ $(function() {
   }
 });
 
+//跑馬
+if (window.innerWidth >= 768) {
+  document.querySelectorAll(".horizontal-scroll").forEach(scrollBox => {
+    scrollBox.innerHTML += scrollBox.innerHTML;
+    scrollBox.addEventListener("mouseenter", () => scrollBox.classList.add("paused"));
+    scrollBox.addEventListener("mouseleave", () => scrollBox.classList.remove("paused"));
+  });
+}
 
-document.querySelectorAll(".horizontal-scroll").forEach(scrollBox => {
-      scrollBox.innerHTML += scrollBox.innerHTML; // 無縫複製內容
-      scrollBox.addEventListener("mouseenter", () => scrollBox.classList.add("paused"));
-      scrollBox.addEventListener("mouseleave", () => scrollBox.classList.remove("paused"));
+
+    // 分頁
+const dots = document.querySelectorAll('.news-page-dots .dot');
+const totalPages = dots.length;
+let currentPage = 0; // 從0開始
+
+function setActiveDot() {
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentPage);
     });
+}
+
+document.querySelector('.news-prev').addEventListener('click', () => {
+    if(currentPage > 0) {
+        currentPage--;
+        setActiveDot();
+    }
+});
+document.querySelector('.news-next').addEventListener('click', () => {
+    if(currentPage < totalPages - 1) {
+        currentPage++;
+        setActiveDot();
+    }
+});
+
+// 初始化
+setActiveDot();
+
+//手機功能
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let overlay = document.querySelector('.mobile-menu-overlay');
+
+if (!overlay) {
+  overlay = document.createElement('div');
+  overlay.classList.add('mobile-menu-overlay');
+  document.body.appendChild(overlay);
+}
+
+  const toggleMenu = (show) => {
+    if (show) {
+      mobileMenu.classList.add('show');
+      overlay.classList.add('show');
+      document.body.classList.add('no-scroll');
+    } else {
+      mobileMenu.classList.remove('show');
+      overlay.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    }
+  };
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('show');
+    toggleMenu(!isOpen);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (
+      mobileMenu.classList.contains('show') &&
+      !mobileMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      toggleMenu(false);
+    }
+
+    if (e.target.matches('.mobile-menu a')) {
+      toggleMenu(false);
+    }
+  });
+  overlay.addEventListener('click', () => {
+  toggleMenu(false);
+});
