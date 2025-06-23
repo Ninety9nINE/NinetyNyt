@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const logoBtn = document.getElementById('logoBtn');
-  const sidebarFloatList = document.getElementById('sidebarFloatList');
+  let logoBtn = document.getElementById('logoBtn');
+  let sidebarFloatList = document.getElementById('sidebarFloatList');
   logoBtn.addEventListener('click', function(e) {
     e.stopPropagation();
     sidebarFloatList.classList.toggle('show');
@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //手機
 document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const overlay = document.querySelector('.mobile-menu-overlay');
+  let menuBtn = document.getElementById('menuBtn');
+  let mobileMenu = document.getElementById('mobileMenu');
+  let overlay = document.querySelector('.mobile-menu-overlay');
 
-  const toggleMenu = (show) => {
+  let toggleMenu = (show) => {
     if (show) {
       mobileMenu.classList.add('show');
       overlay.classList.add('show');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   menuBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('show');
+    let isOpen = mobileMenu.classList.contains('show');
     toggleMenu(!isOpen);
   });
 

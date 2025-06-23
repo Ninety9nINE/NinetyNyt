@@ -129,7 +129,8 @@ a{
 
   .flowchart{
     width: 960px;
-    margin-top: 12px;
+    margin: 12px auto;
+    
   }
   .flowchart img{
     width: 100%;
@@ -182,19 +183,22 @@ scroll-snap-type: x mandatory;
 }
 
 .carousel-btn {
-  background: #ded1ac;
-  color: #222C31;
-  border: none;
+  background: none;
+  border: 2px solid #DED1AC;
+  color: #DED1AC;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
+  font-size: 2em;
   cursor: pointer;
-  font-size: 1.3em;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background .15s;
-  z-index: 1;
+  transition: background 0.2s, color 0.2s;
+  overflow: hidden;
+}
+.carousel-btn svg{
+  vertical-align: middle;
 }
 .carousel-btn:hover {
   background: #ffeec5;

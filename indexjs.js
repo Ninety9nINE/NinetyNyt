@@ -1,13 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  const sidebar = document.getElementById('sidebar');
-  const sidebarLogo = document.getElementById('sidebarLogo');
-  const sidebarFloatList = document.getElementById('sidebarFloatList');
-  const header = document.querySelector('.header');
+  let sidebar = document.getElementById('sidebar');
+  let sidebarLogo = document.getElementById('sidebarLogo');
+  let sidebarFloatList = document.getElementById('sidebarFloatList');
+  let header = document.querySelector('.header');
 
   function checkSidebar() {
-    const sidebarRect = sidebar.getBoundingClientRect();
-    const headerRect = header.getBoundingClientRect();
+    let sidebarRect = sidebar.getBoundingClientRect();
+    let headerRect = header.getBoundingClientRect();
     // sidebar底部 
     if (sidebarRect.bottom >= headerRect.bottom) {
       sidebar.classList.add('hide');
@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(function() {
-  const $items = $('.news-item');
-  const $prev = $('.news-prev');
-  const $next = $('.news-next');
-  const pageSize = 4;
+  let $items = $('.news-item');
+  let $prev = $('.news-prev');
+  let $next = $('.news-next');
+  let pageSize = 4;
   let cur = 0;
-  const totalPages = Math.ceil($items.length / pageSize);
+  let totalPages = Math.ceil($items.length / pageSize);
 
   function showPage(page) {
     if (page < 0) page = 0;
@@ -77,8 +77,8 @@ if (window.innerWidth >= 768) {
 
 
     // 分頁
-const dots = document.querySelectorAll('.news-page-dots .dot');
-const totalPages = dots.length;
+let dots = document.querySelectorAll('.news-page-dots .dot');
+let totalPages = dots.length;
 let currentPage = 0; // 從0開始
 
 function setActiveDot() {
@@ -104,8 +104,8 @@ document.querySelector('.news-next').addEventListener('click', () => {
 setActiveDot();
 
 //手機功能
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
+  let menuBtn = document.getElementById('menuBtn');
+  let mobileMenu = document.getElementById('mobileMenu');
   let overlay = document.querySelector('.mobile-menu-overlay');
 
 if (!overlay) {
@@ -114,7 +114,7 @@ if (!overlay) {
   document.body.appendChild(overlay);
 }
 
-  const toggleMenu = (show) => {
+  let toggleMenu = (show) => {
     if (show) {
       mobileMenu.classList.add('show');
       overlay.classList.add('show');
@@ -127,7 +127,7 @@ if (!overlay) {
   };
 
   menuBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('show');
+    let isOpen = mobileMenu.classList.contains('show');
     toggleMenu(!isOpen);
   });
 

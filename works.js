@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const logoBtn = document.getElementById('logoBtn');
-  const sidebarFloatList = document.getElementById('sidebarFloatList');
+  let logoBtn = document.getElementById('logoBtn');
+  let sidebarFloatList = document.getElementById('sidebarFloatList');
   logoBtn.addEventListener('click', function(e) {
     e.stopPropagation();
     sidebarFloatList.classList.toggle('show');
@@ -14,19 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // 分頁
 document.addEventListener('DOMContentLoaded', function() {
   // 1. 參數設定
-  const pageSize = 8; // 每頁要幾個作品
-  const items = document.querySelectorAll('.gallery-item');
-  const totalPages = Math.ceil(items.length / pageSize);
+  let pageSize = 8; // 每頁要幾個作品
+  let items = document.querySelectorAll('.gallery-item');
+  let totalPages = Math.ceil(items.length / pageSize);
 
   // 2. 動態生成 dots
-  const dotsContainer = document.querySelector('.gallery-pagination .dots');
+  let dotsContainer = document.querySelector('.gallery-pagination .dots');
   dotsContainer.innerHTML = '';
   for (let i = 0; i < totalPages; i++) {
-    const dot = document.createElement('span');
+    let dot = document.createElement('span');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
     dotsContainer.appendChild(dot);
   }
-  const dots = document.querySelectorAll('.gallery-pagination .dot');
+  let dots = document.querySelectorAll('.gallery-pagination .dot');
 
   let currentPage = 0;
 
@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  const fadeDuration = 320; // 和 transition 秒數一致(毫秒)
+  let filterBtns = document.querySelectorAll('.filter-btn');
+  let galleryItems = document.querySelectorAll('.gallery-item');
+  let fadeDuration = 320; // 和 transition 秒數一致(毫秒)
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.classList.add('active');
 
       // 2. 取得按鈕的分類
-      const filter = btn.dataset.filter;
+      let filter = btn.dataset.filter;
 
       // 3. 顯示對應卡片
 galleryItems.forEach(item => {
@@ -106,11 +106,11 @@ galleryItems.forEach(item => {
 });
 // menu
 document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const overlay = document.querySelector('.mobile-menu-overlay');
+  let menuBtn = document.getElementById('menuBtn');
+  let mobileMenu = document.getElementById('mobileMenu');
+  let overlay = document.querySelector('.mobile-menu-overlay');
 
-  const toggleMenu = (show) => {
+  let toggleMenu = (show) => {
     if (show) {
       mobileMenu.classList.add('show');
       overlay.classList.add('show');
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   menuBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('show');
+    let isOpen = mobileMenu.classList.contains('show');
     toggleMenu(!isOpen);
   });
 
