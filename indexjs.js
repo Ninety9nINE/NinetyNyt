@@ -69,7 +69,7 @@ $(function() {
 //跑馬
 if (window.innerWidth >= 768) {
   document.querySelectorAll(".horizontal-scroll").forEach(scrollBox => {
-    scrollBox.innerHTML += scrollBox.innerHTML;
+    scrollBox.innerHTML += scrollBox.innerHTML+= scrollBox.innerHTML;
     scrollBox.addEventListener("mouseenter", () => scrollBox.classList.add("paused"));
     scrollBox.addEventListener("mouseleave", () => scrollBox.classList.remove("paused"));
   });

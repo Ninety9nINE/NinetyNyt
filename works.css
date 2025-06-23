@@ -308,89 +308,6 @@ z-index: 2;
   pointer-events: none;
 }
 
-
-/* footer */
-.site-footer {
-  color: #ded1ac;
-  font-size: 16px;
-  margin-top: 60px;
-  background-color: #171C1F;
-}
-.footer-main {
-  display: flex;
-  justify-content: center;
-  margin: 240px;
-  padding-top: 240px;
-}
-.footer-menu {
-  display: flex;
-  gap: 60px;
-  padding: 0;
-  margin: 0;
-}
-.footer-menu li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 4px;
-}
-.menu-zh {
-  writing-mode: vertical-rl;
-  display: block;
-  margin: 0 2px 0 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ded1ac;
-  letter-spacing: 10%;
-}
-.menu-en {
-  writing-mode: vertical-rl;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #ded1ac99;
-  margin: 0;
-}
-.footer-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px 60px 16px 60px;
-  background: #232b2e;
-}
-.footer-info-left {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.footer-info-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-}
-.footer-socials {
-  display: flex;
-  gap: 24px;
-  margin: 8px 0;
-}
-.footer-socials img {
-  width: 36px;
-  height: 36px;
-  filter: brightness(1.2);
-}
-.copyright {
-  font-size: 16px;
-  color: #ded1ac99;
-  margin-top: 8px;
-}
-.icon {
-  margin-right: 8px;
-}
-
-.mobile-header-bar{
-  display: none;
-}
-.mobile-menu{}
 /* ========== 手機和平板通用版樣式：小於1200px ========== */
 /*  MENU 導覽選單（手機 & 平板通用） */
 
@@ -501,4 +418,10 @@ z-index: 2;
     display: none;
   }
 
+}
+@media (min-width: 1200px) {
+  .mobile-header-bar,
+  .mobile-menu {
+    display: none;
+  }
 }

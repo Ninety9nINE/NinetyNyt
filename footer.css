@@ -57,6 +57,7 @@
 
 .icon svg {
   vertical-align: bottom;
+  
 }
 .footer-info-right {
   display: flex;
@@ -82,7 +83,10 @@
 .icon {
   margin-right: 8px;
 }
-
+.footer-info svg path {
+    fill: #ded1ac; /* 手機版的深色， */
+    stroke: #ded1ac; /* 若你也有使用 stroke */
+  }
 @media (max-width: 767px) {
   
   .footer-main {

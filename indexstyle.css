@@ -622,6 +622,7 @@ a{
       border-radius: 2px;
       flex-shrink: 0;
       overflow: hidden;
+      border-radius: 5px;
     }
 
     .work-card img, .brand-card img {
@@ -724,6 +725,7 @@ a{
     font-size: 16px;
     cursor: pointer;
     color: #222;
+    margin-right: 16px;
   }
 
   .mobile-menu {
@@ -798,7 +800,7 @@ a{
   }
 
   .whatwedo {
-    font-size: 20px;
+    font-size: 24px;
     margin: 10px 0;
   }
 
@@ -820,10 +822,12 @@ a{
   }
 
   .news-section {
-    font-size: 24px;
-    margin: 20px 0;
+    font-size: 32px;
+    margin: 0px;
     text-align: center;
     flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 0px;
   }
 
   .news-inner {
@@ -927,7 +931,7 @@ a{
   .work-card {
     flex: 0 0 auto;
     width: 260px;
-    border-radius: 10px;
+   
     background: #1d1d1d;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;

@@ -23,7 +23,7 @@ a{
 .title h2{
     margin:120px 0 0px 0;
     font-size: 64px;
-    
+    font-weight: bold;
 }
 .title span{
     font-size: 24px;
@@ -41,7 +41,7 @@ a{
 .hero img{
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: fit-cover;
 }
 .main{
     position:relative;
@@ -56,7 +56,7 @@ a{
     height: 220px; 
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -93,7 +93,7 @@ a{
 .mainintro::after{
   content: "";
   position: absolute;
-  background-image: url('./pics/bgflower.svg');
+  background-image: url(./pics/bgflower.svg);
   right: -700px;
   top: -100px;
   width: 900px;
@@ -106,7 +106,7 @@ a{
 .mainintro::before{
   content: "";
   position: absolute;
-  background-image: url('./pics/bgflower.svg');
+  background-image: url(./pics/bgflower.svg);
   left: -990px;
   top: 650px;
   scale: -1;
@@ -119,12 +119,19 @@ a{
 }
 .inner2{
     display: flex;
-    margin:0 0 0 300px ;
+    margin:60px 200px 60px 200px ;
 } 
 .inner2 span{
     margin-right:60px ;
 }
+.inner2 img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 .mainintro2{
+  margin: 20px 0;
     color: #ded1ac;
     font-size: 22px;
     letter-spacing:10% ;
@@ -353,11 +360,17 @@ img{
     text-align: center;
     margin: 20px 0;
   }
-
+ .mainintro::after{
+  display: none;
+ }
   .founder, .cofounder {
     flex-direction: column;
     margin: 40px 0;
     text-align: center;
+  }
+ .name{
+  margin-top: 10px;
+
   }
   .founderintro,.cofounderintro{
     font-size: 16px;
@@ -368,8 +381,11 @@ img{
     margin: 0 auto 20px;
     width: 220px;
     height: auto;
+    
   }
-
+  .founderpic img, .cofounderpic img{
+    border-radius: 100px;
+  }
   .name {
     font-size: 20px;
     justify-content: space-between;
@@ -380,11 +396,9 @@ img{
     padding: 0 16px 60px;
     line-height: 2.2;
   }
+
 }
-.mainintro{
-    display: none !important;
-    background-image: none !important;
-}
+/*  */
 @media (min-width: 1200px) {
   .mobile-header-bar,
   .mobile-menu {
